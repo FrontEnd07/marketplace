@@ -1,0 +1,20 @@
+.main {
+  background: #EFD5D6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E5E5E5;
+
+  > div {
+    padding: 3px 21px;
+  }
+
+  > .logo {
+    display: flex;
+
+  }
+
+  > .contact {
+    color: #D09193;
+  }
+}
