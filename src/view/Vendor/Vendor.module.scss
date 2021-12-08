@@ -1,3 +1,29 @@
-.main {
+@import "@style/index.scss";
 
+.main {
+  @include container(1100px);
+
+  > .category {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 19px 21px;
+
+    > .active {
+      background: #EFD5D6;
+      color: #D09193;
+      font-weight: bold;
+    }
+
+    > div {
+      margin-right: 11px;
+      margin-bottom: 13px;
+      font-size: 13px;
+      font-weight: 400;
+      border: 1px solid;
+      line-height: 18px;
+      color: #D09193;
+      border-radius: 14px;
+      padding: 4px 17px;
+    }
+  }
 }

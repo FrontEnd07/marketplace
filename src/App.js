@@ -1,12 +1,12 @@
 import React, {lazy, Suspense} from "react";
 
-const Header = lazy(() => import("@components/Header"));
+const Vendor = lazy(() => import("@view/Vendor"));
 
 function App() {
     return (
         <div className="App">
             <Suspense fallback={<div>Loadding...</div>}>
-                <Header/>
+                <Vendor />
             </Suspense>
         </div>
     );
