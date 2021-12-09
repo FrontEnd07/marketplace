@@ -1,12 +1,12 @@
 .main {
-  > .header {
+  >.header {
     margin: 0px 21px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 13.48px;
 
-    > div {
-      > h1 {
+    >div {
+      >h1 {
         margin: 0;
         color: #50555c;
         font-size: 13px;
@@ -16,21 +16,22 @@
     }
 
     :first-child {
-      > h1 {
+      >h1 {
         font-weight: bold;
       }
     }
 
     :last-child {
-      > h1 {
+      >h1 {
         font-weight: normal;
       }
     }
   }
 
-  > .list {
+  >.list {
     padding-left: 21px;
     padding-bottom: 9px;
+
     .title {
       font-style: normal;
       font-weight: normal;
@@ -49,7 +50,7 @@
     .dscr {
       padding: 4px 10px 5px 10px;
 
-      > .desc {
+      >.desc {
         font-style: normal;
         font-weight: 300;
         font-size: 11px;
@@ -58,7 +59,7 @@
         white-space: nowrap;
       }
 
-      > .price {
+      >.price {
         font-style: normal;
         font-weight: bold;
         font-size: 13px;
@@ -70,7 +71,8 @@
 
     .image {
       position: relative;
-      > .discount {
+
+      >.discount {
         position: absolute;
         top: 0;
         padding: 9px 5px;
@@ -82,8 +84,10 @@
         color: #ffffff;
         border-bottom-right-radius: 15px;
       }
-      > img {
+
+      >img {
         width: 100%;
+        display: block;
       }
     }
   }

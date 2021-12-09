@@ -1,8 +1,9 @@
 import React from 'react';
-import style from ''
+import style from "./Product.model.scss";
+
 const Product = () => {
     return (
-        <div>
+        <div className={style.main}>
             Product
         </div>
     );

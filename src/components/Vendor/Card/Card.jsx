@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import style from "./Card.module.scss";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
+
+const Product = lazy(() => import("@view/Vendor/Product"));
 
 const Card = ({ data }) => {
     return (
@@ -16,12 +19,12 @@ const Card = ({ data }) => {
             </div>
             <Swiper spaceBetween={9} className={style.list} slidesPerView="2.30" freeMode={true}>
                 {data.el.map((el, id) => <SwiperSlide className={style.card} key={id}>
-                    <div className={style.image}>
+                    <Link to="/product" className={style.image}>
                         <img src={el.image} alt="" />
                         {el.discount &&
                             <div className={style.discount}>-{el.discount}</div>
                         }
-                    </div>
+                    </Link>
                     <div className={style.dscr}>
                         <div className={style.title}>{el.title}</div>
                         <div className={style.desc}>{el.desc}</div>

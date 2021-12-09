@@ -168,7 +168,7 @@ const Vendor = () => {
             <Header />
             <div className={style.category}>
                 {["Все", "Именной", "Праздничный", "Юбилейный", "Свадебный", "Детям", "Мужчинам", "Фруктовый", "Другое"].map((el, id) =>
-                    <div className={`${id == 0 ? style.active : ""}`} key={id}>{el}</div>
+                    <div className={`${id === 0 ? style.active : ""}`} key={id}>{el}</div>
                 )}
             </div>
             <div className={style.list}>
