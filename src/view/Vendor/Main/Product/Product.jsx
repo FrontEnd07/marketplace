@@ -58,6 +58,7 @@ const Product = () => {
             ]
         }
     ]
+    console.log("test")
     return (
         <div className={style.main}>
             <div className={style.slide}>
