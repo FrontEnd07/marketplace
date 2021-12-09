@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,4 +15,7 @@ body {
 .swiper-container {
   padding-left: 21px;
   padding-bottom: 9px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #efd5d6 !important;
 }

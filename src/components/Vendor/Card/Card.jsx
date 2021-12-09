@@ -1,10 +1,8 @@
 import React, { lazy } from 'react';
 import style from "./Card.module.scss";
 import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import 'swiper/swiper.scss';
-
-const Product = lazy(() => import("@view/Vendor/Product"));
 
 const Card = ({ data }) => {
     return (
