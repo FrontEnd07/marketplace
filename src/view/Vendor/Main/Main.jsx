@@ -1,9 +1,6 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import style from "./Main.module.scss";
 import Card from "@components/Vendor/Card";
-
-// const Header = lazy(() => import("@components/Vendor/Header"));
-// const Card = lazy(() => import("@components/Vendor/Card"));
 
 const Main = () => {
     const hit =

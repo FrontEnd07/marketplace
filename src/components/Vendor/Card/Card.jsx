@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import style from "./Card.module.scss";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';

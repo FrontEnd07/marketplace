@@ -7,13 +7,8 @@ function App() {
 
     return (
         <div className="App">
-
             <Suspense fallback={<div>Loadding...</div>}>
                 {routes}
-                {/* <Switch>
-                    <Route exact path="/" render={() => <Vendor />} />
-                    <Route exact path="/product" render={() => <Product />} />
-                </Switch> */}
             </Suspense>
         </div>
     );

@@ -1,7 +1,5 @@
-import React, { lazy } from 'react'
+import React from 'react'
 import Vendor from "@view/Vendor";
-
-// const Vendor = lazy(() => import("@view/Vendor"))
 
 export const useRouter = (roles) => {
 
