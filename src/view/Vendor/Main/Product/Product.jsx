@@ -1,6 +1,7 @@
 import React from 'react';
 import style from "./Product.module.scss";
 import Sku from "./Components/Sku";
+import { Datepicker } from "@components/Datepicker";
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
@@ -78,6 +79,9 @@ const Product = () => {
                 </div>
                 <div className={style.sku}>
                     <Sku data={skuData} />
+                </div>
+                <div className={style.form}>
+                    <Datepicker />
                 </div>
             </div>
         </div>

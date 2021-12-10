@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { useRouter } from "@hooks/useRoutes";
 
 function App() {
@@ -7,9 +7,7 @@ function App() {
 
     return (
         <div className="App">
-            <Suspense fallback={<div>Loadding...</div>}>
-                {routes}
-            </Suspense>
+            {routes}
         </div>
     );
 }

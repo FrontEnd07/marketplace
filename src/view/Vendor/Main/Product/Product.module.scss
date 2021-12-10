@@ -1,26 +1,29 @@
 .main {
-  > .slide {
+  >.slide {
     .image {
       width: 100%;
       display: flex;
     }
   }
 
-  > .content {
-    padding: 13px 21px;
-    padding-right: 0px;
+  >.content {
 
-    > .info {
+    >.info {
+      padding: 0px 21px;
+
       :first-child {
-        > h1 {
+        >h1 {
           color: #50555c;
           font-style: normal;
           font-weight: 500;
           font-size: 13px;
           line-height: 18px;
+          margin-top: 13px;
         }
       }
+
       :last-child {
+        margin-bottom: 9px;
         font-style: normal;
         font-weight: 300;
         font-size: 13px;

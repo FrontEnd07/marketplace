@@ -1,0 +1,26 @@
+.main {
+  > .title {
+    font-size: 13px;
+    line-height: 18px;
+    color: #50555c;
+    font-weight: 600;
+  }
+  > .data {
+    position: relative;
+    display: flex;
+    align-items: center;
+    > .union {
+      position: absolute;
+      right: 13px;
+    }
+  }
+
+  .dateInput {
+    padding: 16px;
+    border: 0.5px solid #dadada;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 100%;
+    outline: none;
+  }
+}
