@@ -1,2 +1,96 @@
 .main {
+    >.property {
+        overflow: hidden;
+
+        >.list {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            overflow-x: auto;
+            padding-left: 21px;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            >li {
+                display: inline-block;
+                border: 1.2px solid #EFD5D6;
+                box-sizing: border-box;
+                border-radius: 26px;
+                padding: 4px 14px;
+                margin-right: 11px;
+                margin-bottom: 11px;
+                color: #D09193;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 18px;
+            }
+        }
+
+        >.title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+            color: #50555C;
+            padding-bottom: 9px;
+            padding-left: 21px;
+        }
+
+        >.propertyImage {
+            display: block;
+            white-space: nowrap;
+
+            >li {
+                width: 40%;
+                padding: 0px;
+                border: none;
+                display: inline-block;
+                white-space: normal;
+                vertical-align: top;
+                margin-bottom: 0px;
+                padding: 10px 0px;
+
+                >div {
+                    border: 2px solid #FFFFFF;
+                    box-sizing: border-box;
+                    box-shadow: 0.5px 0.5px 4px 0.3px rgba(0, 0, 0, 0.15);
+                    border-radius: 3px;
+                    display: flex;
+                    height: 96px;
+                    overflow: hidden;
+                    align-items: center;
+
+                    >.image img {
+                        width: 100%;
+                        display: flex;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+
+        >.options {
+            margin: 5px 0px 10px 0px;
+            padding: 0px 0px 0px 35px;
+
+            >li {
+                font-size: 13px;
+                color: #50555C;
+
+                &::before {
+                    content: "•";
+                    color: #04C800;
+                    font-weight: bold;
+                    position: absolute;
+                    display: inline-block;
+                    font-size: 21px;
+                    margin-top: -5px;
+                    width: 1em;
+                    margin-left: -15.5px;
+                }
+            }
+        }
+    }
 }

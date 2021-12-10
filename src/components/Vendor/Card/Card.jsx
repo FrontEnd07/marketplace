@@ -1,8 +1,14 @@
 import React from 'react';
 import style from "./Card.module.scss";
 import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import 'swiper/swiper.scss';
+
+import SwiperCore, {
+    FreeMode
+} from 'swiper';
+
+SwiperCore.use([FreeMode]);
 
 const Card = ({ data }) => {
     return (

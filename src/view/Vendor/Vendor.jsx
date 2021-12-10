@@ -1,10 +1,18 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import style from "./Vendor.module.scss";
 import { Route, Switch } from "react-router-dom";
 import Header from "@components/Vendor/Header";
+import Main from "./Main";
+import Product from "./Main/Product";
 
-const Main = lazy(() => import("./Main"));
-const Product = lazy(() => import("./Main/Product"));
+// import loadable from '@loadable/component';
+
+// const Main = loadable(() => import("./Main"), {
+//     fallback: <div>Main...</div>,
+// });
+// const Product = loadable(() => import("./Main/Product"), {
+//     fallback: <div>Product...</div>,
+// });
 
 const Vendor = () => {
     return (
