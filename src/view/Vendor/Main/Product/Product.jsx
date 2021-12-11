@@ -2,6 +2,9 @@ import React from 'react';
 import style from "./Product.module.scss";
 import Sku from "./Components/Sku";
 import { Datepicker } from "@components/Datepicker";
+import { LField } from "@components/Form"
+import { Button } from "@components/Buttons"
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
@@ -61,6 +64,9 @@ const Product = () => {
     ]
     return (
         <div className={style.main}>
+            <div className={style.price}>
+                <span>185 смн</span>
+            </div>
             <div className={style.slide}>
                 <Swiper pagination={true}>
                     {["https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg", "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg", "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg"].map((el, id) => <SwiperSlide key={id}>
@@ -81,7 +87,23 @@ const Product = () => {
                     <Sku data={skuData} />
                 </div>
                 <div className={style.form}>
-                    <Datepicker />
+                    <div className={style.datepicker} >
+                        <Datepicker />
+                    </div>
+                    <div className={style.wishes}>
+                        <LField
+                            id="wishes"
+                            type="text"
+                            label="Дополнительная информация"
+                            placeholder="Опишите ваше пожелании..." />
+                    </div>
+                    <div className={style.button}>
+                        <Button appClassName={style.link}>
+                            <Link to="/order">
+                                заказать
+                            </Link>
+                        </Button>
+                    </div>
                 </div>
             </div>
         </div>

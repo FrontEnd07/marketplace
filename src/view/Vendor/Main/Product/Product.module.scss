@@ -1,4 +1,26 @@
 .main {
+  margin-bottom: 13px;
+  position: relative;
+
+  >.price {
+    position: fixed;
+    z-index: 99;
+    right: 15px;
+    top: 68px;
+
+    >span {
+      padding: 8px 18px;
+      background: #04C800;
+      color: #fff;
+      font-size: 15px;
+      border: 2px solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 26px;
+      font-weight: bold;
+      line-height: 18px;
+    }
+  }
+
   >.slide {
     .image {
       width: 100%;
@@ -28,6 +50,27 @@
         font-weight: 300;
         font-size: 13px;
         line-height: 18px;
+      }
+    }
+
+    >.form {
+      padding: 0px 21px;
+
+      >.datepicker {
+        margin-bottom: 20px;
+      }
+
+      >.wishes {
+        margin-bottom: 23px;
+      }
+
+      >.button {
+        >.link {
+          >a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
       }
     }
   }

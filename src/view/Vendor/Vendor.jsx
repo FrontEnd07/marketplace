@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Header from "@components/Vendor/Header";
 import Main from "./Main";
 import Product from "./Main/Product";
+import Order from "./Main/Order";
 
 // import loadable from '@loadable/component';
 
@@ -21,6 +22,7 @@ const Vendor = () => {
             <Switch>
                 <Route exact path="/" render={() => <Main />} />
                 <Route exact path="/product" render={() => <Product />} />
+                <Route exact path="/order" render={() => <Order />} />
             </Switch>
         </div>
     );

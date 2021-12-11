@@ -12,16 +12,17 @@
     border-radius: 3px;
     cursor: pointer;
     width: 100%;
+    text-transform: uppercase;
 
     >img {
         height: 25px;
     }
 
     &:hover {
-        background: #2674fc;
+        background: #04c800c2;
     }
 
     &:active {
-        background: #1d67e1;
+        background: #04c800c2;
     }
 }
