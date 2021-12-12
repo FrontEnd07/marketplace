@@ -1,19 +1,20 @@
 .field {
-    >div {
-        >label {
-            font-size: 13px;
-            font-weight: 600;
-            color: #50555C;
-        }
-
-        >input {
-            border: none;
-            width: 100%;
-            padding-bottom: 5px;
-            outline: none;
-            margin-top: 13px;
-            box-sizing: border-box;
-            border-bottom: 1px solid #DADADA;
-        }
+  > div {
+    > label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #50555c;
     }
+
+    > input {
+      padding: 0px;
+      border: none;
+      width: 100%;
+      padding-bottom: 5px;
+      outline: none;
+      margin-top: 13px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #dadada;
+    }
+  }
 }

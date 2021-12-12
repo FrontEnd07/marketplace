@@ -1,9 +1,9 @@
 .main {
-  background: #EFD5D6;
+  background: #efd5d6;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
 
   > div {
     padding: 3px 21px;
@@ -11,10 +11,12 @@
 
   > .logo {
     display: flex;
-
   }
 
   > .contact {
-    color: #D09193;
+    > a {
+      color: #d09193;
+      text-decoration: none;
+    }
   }
 }

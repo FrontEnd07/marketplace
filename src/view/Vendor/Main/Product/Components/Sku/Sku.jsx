@@ -10,9 +10,10 @@ const Sku = ({ data }) => {
                 <ul className={`${style.list ? style.list : ""} ${el.variant[0].propImage ? style.propertyImage : ""}`}>
                     {el.variant.map((value, i) => <li key={i}>
                         <div>
-                            {value.propImage ? <div className={style.image}>
-                                <img src={value.propImage} alt={value.propName} />
-                            </div>
+                            {value.propImage
+                                ? <div className={style.image}>
+                                    <img src={value.propImage} alt={value.propName} />
+                                </div>
                                 : <span className={style.text}>{value.propName}</span>}
                         </div>
                     </li>
