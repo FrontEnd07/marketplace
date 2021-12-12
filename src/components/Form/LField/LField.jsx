@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import style from './LField.module.scss';
 
-export const LField = forwardRef((props, ref) => {
+export const LField = props => {
 
     const { errors, appClassName, register, label, type, ...rest } = props
 
@@ -23,5 +23,5 @@ export const LField = forwardRef((props, ref) => {
             }
         </div>
     </div>
-})
+}
 
