@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from "./Vendor.module.scss";
-import { Route, Switch } from "react-router-dom";
-import Header from "@components/Vendor/Header";
+import { Route, Routes } from "react-router-dom";
+import Header from "@view/Header";
 import { Product, Order, Contact, Success } from "@view/Vendor/Main/index"
 import Screen from "@view/Vendor/Screen"
 import Main from "@view/Vendor/Main";
@@ -24,13 +24,13 @@ const Vendor = () => {
     return (
         <div className={style.main}>
             <Header />
-            <Switch>
-                <Route exact path="/" render={() => <Main />} />
-                <Route exact path="/product" render={() => <Product />} />
-                <Route exact path="/success" render={() => <Success />} />
-                <Route exact path="/order" render={() => <Order />} />
-                <Route exact path="/contact" render={() => <Contact />} />
-            </Switch>
+            <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/product" element={<Product />} />
+                <Route path="/success" element={<Success />} />
+                <Route path="/order" element={<Order />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
         </div>
     );
 };
