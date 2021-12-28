@@ -1,6 +1,7 @@
 import React from 'react';
 import style from "./Main.module.scss";
 import Card from "@components/Vendor/Card";
+import { Category } from "@components/Category"
 
 const Main = () => {
     const hit =
@@ -160,10 +161,8 @@ const Main = () => {
     };
     return (
         <div className={style.main}>
-            <div className={style.category}>
-                {["Все", "Именной", "Праздничный", "Юбилейный", "Свадебный", "Детям", "Мужчинам", "Фруктовый", "Другое"].map((el, id) =>
-                    <div className={`${id === 0 ? style.active : ""}`} key={id}>{el}</div>
-                )}
+            <div>
+                <Category data={["Все", "Именной", "Праздничный", "Юбилейный", "Свадебный", "Детям", "Мужчинам", "Фруктовый", "Другое"]} />
             </div>
             <div className={style.list}>
                 <div><Card data={hit} /></div>
