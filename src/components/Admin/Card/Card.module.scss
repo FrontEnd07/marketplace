@@ -1,0 +1,74 @@
+.main {
+    >p {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 18px;
+        color: #50555C;
+        margin-bottom: 17px;
+    }
+
+    >.card {
+        margin-bottom: 8px;
+
+
+    }
+
+    >:last-child {
+        margin-bottom: 0px;
+    }
+
+    >.card {
+        display: flex;
+        border: 0.5px solid #DADADA;
+        box-sizing: border-box;
+        border-radius: 3px;
+        height: 96px;
+
+        >:first-child {
+            width: 30%;
+            padding: 0px 0px 94px 0px;
+            position: relative;
+
+            >img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        >:last-child {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 9px 12px;
+
+            >:first-child {
+                >:first-child {
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+
+                >:last-child {
+                    font-weight: 300;
+                    font-size: 11px;
+                    color: #50555C;
+                    line-height: 18px;
+                }
+
+            }
+
+            >:last-child {
+                >span {
+                    font-weight: 300;
+                    font-size: 11px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}

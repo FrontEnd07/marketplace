@@ -21,18 +21,16 @@ const Vendor = () => {
 
     if (!screen) return <Screen />
 
-    return (
-        <div className={style.main}>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Main />} />
-                <Route path="/product" element={<Product />} />
-                <Route path="/success" element={<Success />} />
-                <Route path="/order" element={<Order />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
-        </div>
-    );
+    return <div className={style.main}>
+        <Header />
+        <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/order" element={<Order />} />
+            <Route path="/contact" element={<Contact />} />
+        </Routes>
+    </div>
 };
 
 export default Vendor;
