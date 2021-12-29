@@ -1,0 +1,28 @@
+@import "./../style/style.scss";
+
+.main {
+    > .AMain {
+        @include headerColor;
+    }
+    > .role {
+        padding: 17px 21px;
+        display: flex;
+        justify-content: space-between;
+        > .active {
+            background: #c9f1fe;
+        }
+        > a {
+            width: 48%;
+            border: 1.5px solid #9cbfcb;
+            box-sizing: border-box;
+            border-radius: 26px;
+            justify-content: center;
+            padding: 9px 0;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 18px;
+            color: #50555c;
+            text-decoration: none;
+        }
+    }
+}

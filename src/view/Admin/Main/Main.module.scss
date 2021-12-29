@@ -1,9 +1,7 @@
+@import "./../style/style.scss";
 .main {
-    >.AMain {
-        background: #C9F1FE;
-        box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(27.1828px);
-        border-bottom: none;
+    > .AMain {
+        @include headerColor;
     }
 
     .category {
@@ -11,22 +9,22 @@
             background-color: aqua;
         }
 
-        >div {
-            border: 1.5px solid #9CBFCB;
+        > div {
+            border: 1.5px solid #9cbfcb;
             color: black;
         }
     }
 
-    >.list {
+    > .list {
         padding: 21px;
         position: relative;
 
-        >div {
+        > div {
             margin-bottom: 17px;
         }
     }
 
-    >.button {
+    > .button {
         position: fixed;
         display: flex;
         justify-content: space-between;
@@ -35,25 +33,28 @@
         right: 0;
         padding: 21px;
 
-        >div {
+        > div {
             width: 48%;
-        }
-
-        >:first-child {
-            >button {
-                background: #50555C;
+            > a {
+                text-decoration: none;
             }
         }
 
-        >:last-child {
-            >button {
-                background: #FFD600;
+        > :first-child {
+            > a > button {
+                background: #50555c;
+            }
+        }
+
+        > :last-child {
+            > a > button {
+                background: #ffd600;
                 color: #000;
 
-                >:last-child {
+                > :last-child {
                     padding: 0px 7px;
                     background: red;
-                    border: 1px solid #FFFFFF;
+                    border: 1px solid #ffffff;
                     box-sizing: border-box;
                     color: #fff;
                     border-radius: 50%;
@@ -61,6 +62,5 @@
                 }
             }
         }
-
     }
 }

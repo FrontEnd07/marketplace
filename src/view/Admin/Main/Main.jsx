@@ -5,6 +5,7 @@ import { Category } from "@components/Category";
 import { Card } from "@components/Admin/Card"
 import image from "@assets/Admin/milkygirl.png"
 import { Button } from "@components/Buttons"
+import { Link } from "react-router-dom"
 
 const Main = () => {
 
@@ -112,15 +113,19 @@ const Main = () => {
             </div>
             <div className={style.button}>
                 <div>
-                    <Button>
-                        Добавить
-                    </Button>
+                    <Link to="/admin/create">
+                        <Button>
+                            Добавить
+                        </Button>
+                    </Link>
                 </div>
                 <div>
-                    <Button>
-                        <span>Заказы</span>
-                        <span>3</span>
-                    </Button>
+                    <Link to="/admin/order">
+                        <Button>
+                            <span>Заказы</span>
+                            <span>3</span>
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>

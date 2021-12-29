@@ -1,8 +1,8 @@
 .main {
-    >.property {
+    > .property {
         overflow: hidden;
 
-        >.list {
+        > .list {
             padding: 0px;
             margin: 0px;
             list-style: none;
@@ -13,36 +13,36 @@
                 display: none;
             }
 
-            >li {
+            > li {
                 display: inline-block;
-                border: 1.2px solid #EFD5D6;
+                border: 1.2px solid #efd5d6;
                 box-sizing: border-box;
                 border-radius: 26px;
                 padding: 4px 14px;
                 margin-right: 11px;
                 margin-bottom: 11px;
-                color: #D09193;
+                color: #d09193;
                 font-weight: 500;
                 font-size: 13px;
                 line-height: 18px;
             }
         }
 
-        >.title {
+        > .title {
             font-style: normal;
             font-weight: 500;
             font-size: 13px;
             line-height: 18px;
-            color: #50555C;
+            color: #50555c;
             padding-bottom: 9px;
             padding-left: 21px;
         }
 
-        >.propertyImage {
+        > .propertyImage {
             display: block;
             white-space: nowrap;
 
-            >li {
+            > li {
                 width: 40%;
                 padding: 0px;
                 border: none;
@@ -52,8 +52,8 @@
                 margin-bottom: 0px;
                 padding: 10px 0px;
 
-                >div {
-                    border: 2px solid #FFFFFF;
+                > div {
+                    border: 2px solid #ffffff;
                     box-sizing: border-box;
                     box-shadow: 0.5px 0.5px 4px 0.3px rgba(0, 0, 0, 0.15);
                     border-radius: 3px;
@@ -62,26 +62,35 @@
                     overflow: hidden;
                     align-items: center;
 
-                    >.image img {
+                    > .image {
+                        padding: 0px 0px 94px 0px;
+                        position: relative;
                         width: 100%;
-                        display: flex;
-                        border-radius: 3px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 3px;
+                            object-fit: cover;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
                     }
                 }
             }
         }
 
-        >.options {
+        > .options {
             margin: 5px 0px 10px 0px;
             padding: 0px 0px 0px 35px;
 
-            >li {
+            > li {
                 font-size: 13px;
-                color: #50555C;
+                color: #50555c;
 
                 &::before {
                     content: "•";
-                    color: #04C800;
+                    color: #04c800;
                     font-weight: bold;
                     position: absolute;
                     display: inline-block;
