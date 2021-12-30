@@ -1,2 +1,89 @@
 .main {
+    padding: 0px 21px;
+
+    >.list {
+        display: flex;
+        border: 0.5px solid #DADADA;
+        box-sizing: border-box;
+        border-radius: 3px;
+        margin-bottom: 11px;
+
+        >:first-child {
+            width: 30%;
+            padding: 0px 0px 96px 0px;
+            position: relative;
+
+            >img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        >:last-child {
+            width: 70%;
+            padding: 9px 12px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            >.title {
+                >:first-child {
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+
+                :last-child {
+                    font-weight: 300;
+                    font-size: 11px;
+                    line-height: 18px;
+                }
+            }
+
+            >.user,
+            .phone {
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+
+            }
+
+            >.user {
+                padding-top: 15px;
+            }
+
+            >.date {
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 18px;
+            }
+
+            >.wishes {
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                margin-top: 6px;
+            }
+
+            >div {
+                display: flex;
+                position: relative;
+                padding-left: 20px;
+                color: #50555C;
+                flex-direction: column;
+
+                svg {
+                    color: #ED1E31;
+                    position: absolute;
+                    margin-left: -21px;
+                    font-size: 13px;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
 }
