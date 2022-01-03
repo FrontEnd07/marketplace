@@ -1,6 +1,7 @@
 @import "./../style/style.scss";
+
 .main {
-    > .AMain {
+    >.AMain {
         @include headerColor;
     }
 
@@ -9,22 +10,22 @@
             background-color: aqua;
         }
 
-        > div {
+        >div {
             border: 1.5px solid #9cbfcb;
             color: black;
         }
     }
 
-    > .list {
+    >.list {
         padding: 21px;
         position: relative;
 
-        > div {
+        >div {
             margin-bottom: 17px;
         }
     }
 
-    > .button {
+    >.button {
         position: fixed;
         display: flex;
         justify-content: space-between;
@@ -32,22 +33,25 @@
         width: 100%;
         right: 0;
         padding: 21px;
+        box-shadow: 0px 0.5px 4px 0px rgb(0 0 0 / 15%);
+        background: #fff;
 
-        > div {
+        >div {
             width: 48%;
-            > a {
+
+            >a {
                 text-decoration: none;
             }
         }
 
         > :first-child {
-            > a > button {
+            >a>button {
                 background: #50555c;
             }
         }
 
         > :last-child {
-            > a > button {
+            >a>button {
                 background: #ffd600;
                 color: #000;
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './Main.module.scss'
 import Header from '@view/Header'
 import { Category } from "@components/Category";
@@ -6,8 +6,20 @@ import { Card } from "@components/Admin/Card"
 import image from "@assets/Admin/milkygirl.png"
 import { Button } from "@components/Buttons"
 import { Link } from "react-router-dom"
+import { useSpring, animated } from "react-spring";
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 const Main = () => {
+
+    const [hideOnScroll, setHideOnScroll] = useState(true)
+
+    useScrollPosition(
+        ({ prevPos, currPos }) => {
+            const isShow = currPos.y > prevPos.y
+            if (isShow !== hideOnScroll) setHideOnScroll(isShow)
+        },
+        [hideOnScroll]
+    )
 
     const data = {
         title: "Популярные товары",
@@ -101,6 +113,15 @@ const Main = () => {
         ]
     }
 
+    const styles = useSpring({
+        config: {
+            // duration: 250,
+            // frequency: 1
+        },
+        from: { transform: "translate3d(0px, 0px, 0px)" },
+        to: { transform: `translate3d(0px, ${!hideOnScroll ? "98px" : "0px"}, 0px)` },
+    })
+
     return (
         <div className={style.main}>
             <Header appClassName={style.AMain} />
@@ -111,7 +132,7 @@ const Main = () => {
                 <Card data={data} />
                 <Card data={AllItem} />
             </div>
-            <div className={style.button}>
+            <animated.div className={style.button} style={styles}>
                 <div>
                     <Link to="/admin/create">
                         <Button>
@@ -127,8 +148,8 @@ const Main = () => {
                         </Button>
                     </Link>
                 </div>
-            </div>
-        </div>
+            </animated.div>
+        </div >
     );
 }
 
