@@ -5,16 +5,22 @@
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
 
-  > div {
+  >div {
     padding: 3px 21px;
   }
 
-  > .logo {
+  >.logo {
     display: flex;
+
+    >svg {
+      font-size: 25px;
+      color: #D09193;
+      height: 41px;
+    }
   }
 
-  > .contact {
-    > a {
+  >.contact {
+    >a {
       color: #d09193;
       text-decoration: none;
     }

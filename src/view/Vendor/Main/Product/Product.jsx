@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from "./Product.module.scss";
 import Sku from "./Components/Sku";
 import { Datepicker } from "@components/Datepicker";
@@ -6,6 +6,8 @@ import { LField } from "@components/Form"
 import { Button } from "@components/Buttons"
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+import { useSpring, animated } from "react-spring";
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
 
@@ -16,6 +18,25 @@ import SwiperCore, {
 SwiperCore.use([Pagination]);
 
 const Product = () => {
+    const [hideOnScroll, setHideOnScroll] = useState(true)
+    useScrollPosition(
+        ({ prevPos, currPos }) => {
+            const isShow = currPos.y > -69
+            // console.log(isShow)
+            if (isShow !== hideOnScroll) setHideOnScroll(isShow)
+        },
+        [hideOnScroll]
+    )
+
+    const styles = useSpring({
+        config: {
+            // duration: 250,
+            // frequency: 1
+        },
+        from: { transform: "translate3d(0px, -63px, 0px)" },
+        to: { transform: `translate3d(0px, ${!hideOnScroll ? "0px" : "-63px"}, 0px)` },
+    })
+
     const skuData = [
         {
             title: "Выберите подходящий вес",
@@ -62,17 +83,31 @@ const Product = () => {
             ]
         }
     ]
+
     return (
         <div className={style.main}>
-            <div className={style.price}>
-                <span>185 смн</span>
-            </div>
+            <animated.div className={style.price} style={styles}>
+                <div>
+                    <div>
+                        <img src="https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg" />
+                    </div>
+                    <div>
+                        <span>Торт “Пинки”</span>
+                    </div>
+                </div>
+                <div>
+                    <span>185 смн</span>
+                </div>
+            </animated.div>
             <div className={style.slide}>
                 <Swiper pagination={true}>
                     {["https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg", "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg", "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg"].map((el, id) => <SwiperSlide key={id}>
                         <img className={style.image} src={el} alt="" />
                     </SwiperSlide>)}
                 </Swiper>
+                <div className={style.price}>
+                    <span>185 смн</span>
+                </div>
             </div>
             <div className={style.content}>
                 <div className={style.info}>

@@ -7,7 +7,7 @@ export const LField = props => {
 
     return <div className={`${style.field} ${appClassName ? appClassName : ""}`}>
         <div>
-            <label htmlFor={rest.id}>{label}</label>
+            {label && <label htmlFor={rest.id}>{label}</label>}
             <input
                 type={type ? type : 'text'}
                 {...register ? register(rest.name) : null}
@@ -18,7 +18,7 @@ export const LField = props => {
                 <>
                     {errors[rest.name] && <p style={{
                         color: errors[rest.name] && '#FF3333'
-                    }}>Укажите {label}</p>}
+                    }}>Укажите {rest.placeholder}</p>}
                 </>
             }
         </div>
