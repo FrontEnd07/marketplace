@@ -83,13 +83,10 @@ export const MList = ({
     options,
     placeholder = "",
     errors,
-    setValue,
+    setValue
 }) => {
-
     const [valueSelect, setValueSelect] = useState();
-
     const onChange = useCallback((newValue) => setValueSelect(newValue), []);
-
     const removeValue = useCallback(
         (removed) => setValueSelect(valueSelect.filter((v) => v.value !== removed.value)),
         [valueSelect]
@@ -114,14 +111,26 @@ export const MList = ({
                 backgroundColor: "none"
             }
         }),
-        valueContainer: (provided, state) => ({
+        multiValueRemove: (provided, state) => ({
             ...provided,
-            padding: "0px"
+            position: "absolute",
+            backgroundColor: "#FF0000",
+            borderRadius: "50%",
+            padding: "4px",
+            color: "#fff",
+            right: "-8px",
+            top: "-8px",
         }),
-        menuList: (provided, state) => ({
+        multiValue: (provided, state) => ({
             ...provided,
-            ":hover": {
-                backgroundColor: "none"
+            position: "relative",
+            borderRadius: "19px",
+            border: "1.5px solid #9CBFCB",
+            padding: "4px 16px",
+            backgroundColor: "#C9F1FE",
+            marginRight: "14px",
+            ":last-child": {
+                marginRight: "0px",
             }
         }),
         option: (provided, state) => ({
@@ -150,10 +159,7 @@ export const MList = ({
                     options={options}
                     styles={colourStyles}
                     controlShouldRenderValue={false}
-                    components={{
-                        SelectContainer,
-                        DropdownIndicator
-                    }}
+                    components={{ SelectContainer, DropdownIndicator }}
                     placeholder={placeholder}
                     isSearchable={false}
                 />

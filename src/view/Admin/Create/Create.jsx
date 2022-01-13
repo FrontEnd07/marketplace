@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./Create.module.scss";
-import { LField, File, Select, GRadio, MList } from '@components/Form';
+import { LField, File, Select, GRadio, MList, TSelect } from '@components/Form';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -27,7 +27,7 @@ const Create = () => {
         formState: { errors },
         handleSubmit,
     } = useForm({
-        mode: "onBlur",
+        mode: "onChange",
         resolver: yupResolver(schema),
     });
 
@@ -137,6 +137,18 @@ const Create = () => {
                             control={control}
                             setValue={setValue}
                         />
+                    </div>
+                    <div>
+                        <TSelect
+                            errors={errors}
+                            title="Доступные начинки к торту"
+                            name={"classesStatusSelect"} />
+                    </div>
+                    <div>
+                        <TSelect
+                            errors={errors}
+                            title="Декоративные оформлении к торту"
+                            name={"classesStatusSelect1"} />
                     </div>
                 </div>
                 <div className={style.button}>
