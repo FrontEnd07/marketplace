@@ -1,6 +1,8 @@
-label {
-    display: inline-block;
-    width: 67px;
-    height: 67px;
-    cursor: pointer;
+.main {
+    >label {
+        display: inline-block;
+        width: 67px;
+        height: 67px;
+        cursor: pointer;
+    }
 }

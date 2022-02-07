@@ -1,6 +1,8 @@
 import React from "react";
 import { useRouter } from "@hooks/useRoutes";
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Admin, Vendor } from "@view"
 function App() {
 
@@ -13,6 +15,7 @@ function App() {
                 <Route path='/*' element={<Vendor />} />
                 <Route path="/admin/*" element={<Admin />} />
             </Routes>
+            <ToastContainer position="bottom-right" autoClose={8000} />
         </div>
     );
 }

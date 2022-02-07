@@ -1,173 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import style from "./Main.module.scss";
 import Card from "@components/Vendor/Card";
+import { CTitle } from "@components/Vendor/CTitle";
 import { Category } from "@components/Category"
+import { productsApi } from "@http/Vendor/Main"
+import { useDispatch } from 'react-redux';
 
 const Main = () => {
-    const hit =
-    {
-        title: "ХИТ ПРОДАЖИ",
-        el: [
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                weight: true,
-                currency: "смн"
-            }
-        ]
 
-    };
+    const dispatch = useDispatch();
+    const [data, setData] = useState(null)
 
-    const discount = {
-        title: "ВЫГОДНАЯ ПОКУПКА",
-        el: [
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                discount: "90%",
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                discount: "90%",
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                discount: "90%",
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                discount: "90%",
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                discount: "90%",
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                discount: "90%",
-                weight: true,
-                currency: "смн"
-            }
-        ]
-    }
+    useEffect(() => {
+        dispatch(productsApi()).then((res) => {
+            console.log(res)
+            setData(res)
+        })
+        return () => {
 
-    const all =
-    {
-        title: "ВСЕ СЛАДОСТИ",
-        el: [
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                weight: true,
-                currency: "смн"
-            },
-            {
-                image: "https://static.1000.menu/img/content-v2/7d/58/35028/tort-natasha-klassicheskii-sovetskogo-vremeni_1615992726_22_max.jpg",
-                title: "Торт \"Пинки\"",
-                desc: "Малина, крем чиз, джем...",
-                price: 70,
-                weight: true,
-                currency: "смн"
-            }
-        ]
+        }
 
-    };
+    }, [])
+
     return (
         <div className={style.main}>
             <div>
                 <Category data={["Все", "Именной", "Праздничный", "Юбилейный", "Свадебный", "Детям", "Мужчинам", "Фруктовый", "Другое"]} />
             </div>
             <div className={style.list}>
-                <div><Card data={hit} /></div>
-                <div><Card data={discount} /></div>
-                <div><Card data={all} /></div>
+                <div>
+                    <CTitle name="ХИТ ПРОДАЖИ">
+                        {data ? <Card data={data.data.slice(0, 5)} /> : <div>Загрузка...</div>}
+                    </CTitle>
+                </div>
+                <div>
+                    <CTitle name="ВЫГОДНАЯ ПОКУПКА">
+                        {data ? <Card data={data.data.slice(0, 5)} /> : <div>Загрузка...</div>}
+                    </CTitle>
+                </div>
+                <div>
+                    <CTitle name="ВСЕ СЛАДОСТИ">
+                        {data ? <Card data={data.data.slice(0, 5)} /> : <div>Загрузка...</div>}
+                    </CTitle>
+                </div>
             </div>
         </div>
     );

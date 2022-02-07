@@ -1,33 +1,4 @@
 .main {
-  >.header {
-    margin: 0px 21px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 13.48px;
-
-    >div {
-      >h1 {
-        margin: 0;
-        color: #50555c;
-        font-size: 13px;
-        line-height: 18px;
-        font-style: normal;
-      }
-    }
-
-    :first-child {
-      >h1 {
-        font-weight: bold;
-      }
-    }
-
-    :last-child {
-      >h1 {
-        font-weight: normal;
-      }
-    }
-  }
-
   >.list {
     padding-left: 21px;
     padding-bottom: 9px;
@@ -45,6 +16,7 @@
       box-shadow: 0.5px 0.5px 4px 0.3px rgba(0, 0, 0, 0.15);
       border-radius: 3px;
       overflow: hidden;
+      margin-top: 3px;
     }
 
     .dscr {

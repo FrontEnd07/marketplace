@@ -144,12 +144,12 @@ const Create = () => {
                             title="Доступные начинки к торту"
                             name={"classesStatusSelect"} />
                     </div>
-                    <div>
+                    {/* <div>
                         <TSelect
                             errors={errors}
                             title="Декоративные оформлении к торту"
                             name={"classesStatusSelect1"} />
-                    </div>
+                    </div> */}
                 </div>
                 <div className={style.button}>
                     <Button onClick={handleSubmit(hendlersSubmit)}>

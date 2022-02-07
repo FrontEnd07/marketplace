@@ -16,11 +16,9 @@ export const TSelect = ({ name, title, errors }) => {
     }, [])
 
     return <div className={style.main}>
-        <div
-            className={`${name} ${style.SFeild} ${isToggle ? style.fieldSelectActiveToggle : ""}`}
-            onClick={() => setIsToggle((prev) => !prev)}>
+        <div className={`${name} ${style.SFeild} ${isToggle ? style.fieldSelectActiveToggle : ""}`} onClick={() => setIsToggle((prev) => !prev)}>
             <p className={`${name}`}>{title}</p>
-            <BsFillCaretDownFill />
+            <BsFillCaretDownFill className={`${name}`} />
         </div>
         <div className={style.SList}>
             {["text", "text"].map((el, i) => <div key={i}>
@@ -28,7 +26,14 @@ export const TSelect = ({ name, title, errors }) => {
             </div>)}
         </div>
 
-        {isToggle && <div>test</div>}
+        {isToggle && <div className={style.SDown}>
+            {["text", "text"].map((el, i) => <div key={i}>
+                <div>
+                    <img src={Img} alt={el} />
+                </div>
+                <span>{el}</span>
+            </div>)}
+        </div>}
 
         {/* {errors && <p>asd</p>} */}
     </div>
